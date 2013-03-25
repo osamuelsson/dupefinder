@@ -1,16 +1,21 @@
 package se.s8n.dupefinder;
 
 public class FileDatabase {
+	String dbLocation;
 
-	boolean createDB(String dbLocation, String dbRoot) {
+	FileDatabase(String dbLocation) {
+		this.dbLocation = dbLocation;
+	}
+
+	boolean createDB(String dbRoot) {
 		return false;
 	}
 
-	boolean listDB(String dbLocation) {
+	boolean listDB() {
 		return false;
 	}
 
-	boolean showDuplicates(String dbLocation) {
+	boolean showDuplicates() {
 		return false;
 	}
 

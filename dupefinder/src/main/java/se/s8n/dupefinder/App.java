@@ -9,14 +9,14 @@ public class App
     {
     	CmdLineParser todo = new CmdLineParser(args);
     	boolean statusOK = false;
-		FileDatabase db = new FileDatabase();
+		FileDatabase db = new FileDatabase(todo.getDBLocation());
 		switch (todo.getAction()) {
 		case CmdLineParser.CreateDB:
-			statusOK = db.createDB(todo.getDBLocation(), todo.getDbRoot());
+			statusOK = db.createDB(todo.getDbRoot());
 		case CmdLineParser.ListDB:
-			statusOK = db.listDB(todo.getDBLocation());
+			statusOK = db.listDB();
 		case CmdLineParser.ShowDuplicates:
-			statusOK = db.showDuplicates(todo.getDBLocation());
+			statusOK = db.showDuplicates();
 		}
     	if (statusOK) {
     		System.exit(0);
