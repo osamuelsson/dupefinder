@@ -21,4 +21,9 @@ public class CmdLineParserTest {
 		assertThat(actual, is("D:\\Documents"));
 	}
 
+	@Test
+	public void testGetAction() throws Exception {
+		;
+	}
+	
 }
